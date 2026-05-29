@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="AI Data Centers and US Water Stress">
+  <rect width="1200" height="630" fill="#FAFAF7"/>
+  <rect x="0" y="520" width="1200" height="24" fill="#FFEDA0"/>
+  <rect x="0" y="496" width="1200" height="24" fill="#FEB24C"/>
+  <rect x="0" y="472" width="1200" height="24" fill="#FD8D3C"/>
+  <rect x="0" y="448" width="1200" height="24" fill="#FC4E2A"/>
+  <rect x="0" y="424" width="1200" height="24" fill="#E31A1C"/>
+  <rect x="0" y="400" width="1200" height="24" fill="#B10026"/>
+  <text x="80" y="180" fill="#1A1A1A" font-family="Georgia, serif" font-size="64" font-weight="600">AI Data Centers and US Water Stress</text>
+  <text x="80" y="260" fill="#4A4A4A" font-family="Arial, sans-serif" font-size="32">MSc thesis, University of Amsterdam, May 2026</text>
+  <text x="80" y="340" fill="#B10026" font-family="Arial, sans-serif" font-size="24">Replace assets/images/og-image.svg with a PNG before sharing</text>
+</svg>

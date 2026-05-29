@@ -131,14 +131,16 @@
         <section class="content-section" id="methods" aria-labelledby="methods-title">
             <div class="prose">
                 <h2 id="methods-title">Sources and methodology</h2>
-                <p>[METHODS_PARA_1]</p>
-                <p>[METHODS_PARA_2]</p>
+                <p>The map combines three datasets. Data center facilities were compiled by the author from three sources: commercial data center directories, the IM3 Open Source Data Center Atlas published by Pacific Northwest National Laboratory in 2026 (which draws on OpenStreetMap), and a set of 22 hyperscale AI training facilities compiled by Epoch AI in 2026. After deduplication using geographic proximity, name matching, and OpenStreetMap IDs, the merged dataset contains 1,380 facilities across the United States. The compilation is the author's own work and is not publicly redistributed (contact for access).</p>
+                <p>Water stress data is drawn from the World Resources Institute's Aqueduct Water Risk Atlas, version 4.0. Aqueduct divides the contiguous United States into 3,433 hydrological basins, each assigned a Baseline Water Stress score on a five-point scale from Low to Extremely High, based on the ratio of annual withdrawals to available supply over a 40-year period (1979 to 2019). Aqueduct is the standard tool used by data center operators themselves, including Amazon Web Services, as the basis for water risk assessment and stewardship reporting.</p>
+                <p>Power plant data comes from the US Energy Information Administration's Form EIA-860 (February 2025 update), filtered to thermoelectric plants (coal, natural gas, nuclear, petroleum) over 100 megawatts. Renewable sources such as solar and wind were excluded because they consume negligible cooling water. The filtered dataset contains 581 facilities.</p>
+                <p>A few notes on what this map does and does not show. The Aqueduct data captures long-term structural water stress, not year-specific drought conditions. The facility dataset is comprehensive but not exhaustive; many operators do not publicly disclose locations for commercial or security reasons. Water consumption figures are only available for a small number of facilities, drawn from corporate sustainability reports, environmental impact assessments, and water utility records. The map is a tool for visualizing patterns, not a substitute for facility-level audits.</p>
 
                 <h3>Data sources</h3>
                 <ul class="sources-list">
-                    <li>WRI Aqueduct baseline annual water stress</li>
-                    <li>EIA large thermoelectric power plants</li>
-                    <li>Compiled AI data center facility dataset</li>
+                    <li>WRI Aqueduct baseline annual water stress, version 4.0. World Resources Institute, 2023. Licensed under CC BY 4.0. Source: WRI Aqueduct, accessed May 2026. Available at <a href="https://aqueduct.wri.org" rel="noopener noreferrer">aqueduct.wri.org</a></li>
+                    <li>US Energy Information Administration, Form EIA-860, February 2025 update. Public domain. Available at <a href="https://www.eia.gov/electricity/data/eia860/" rel="noopener noreferrer">eia.gov/electricity/data/eia860</a></li>
+                    <li>Compiled AI data center facility dataset (n=1,380), drawing on commercial data center directories, the IM3 Open Source Data Center Atlas (Mongird et al., 2026), and Epoch AI (Cottier &amp; Edelman, 2026). All rights reserved; contact for access.</li>
                 </ul>
             </div>
         </section>

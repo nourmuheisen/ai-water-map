@@ -195,14 +195,38 @@ ul {
     padding: 3.5rem 0 2.5rem;
 }
 
+.hero h1 {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1em;
+    margin-bottom: 1.75rem;
+    font-size: clamp(2.25rem, 5.5vw, 3.5rem);
+    line-height: 1.08;
+    letter-spacing: -0.03em;
+}
+
+.hero__title-line {
+    display: block;
+}
+
 .hero__framing {
-    font-size: 1.1875rem;
+    max-width: 42ch;
+    margin-bottom: 1.5rem;
+    font-family: var(--font-serif);
+    font-size: 1.35rem;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 1.5;
     color: var(--color-text);
 }
 
 .hero__subtitle {
     margin-bottom: 0;
-    font-size: 0.9375rem;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
     color: var(--color-text-muted);
 }
 

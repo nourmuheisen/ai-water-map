@@ -14,7 +14,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400;1,8..60,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;1,400&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/site.css">
 </head>
 <body>
@@ -35,20 +35,14 @@
 
     <main>
         <section class="hero" aria-labelledby="hero-title">
-            <div class="hero__inner">
+            <div class="prose">
                 <h1 id="hero-title">AI Data Centers and US Water Stress</h1>
                 <p class="hero__framing">[HERO_FRAMING]</p>
                 <p class="hero__subtitle">MSc thesis, University of Amsterdam, May 2026.</p>
             </div>
         </section>
 
-        <section class="content-section map-section" id="map-section" aria-labelledby="map-title">
-            <header class="section-header prose">
-                <div class="section-marker">
-                    <p class="section-label">01 / Map</p>
-                </div>
-                <h2 id="map-title">Map</h2>
-            </header>
+        <section class="map-section" id="map-section" aria-label="Interactive map">
             <div class="map-section__frame">
                 <iframe
                     id="map-iframe"
@@ -68,12 +62,9 @@
         </section>
 
         <section class="content-section" id="layers" aria-labelledby="layers-title">
-            <header class="section-header prose">
-                <div class="section-marker">
-                    <p class="section-label">02 / Layers</p>
-                </div>
+            <div class="prose">
                 <h2 id="layers-title">What you're looking at</h2>
-            </header>
+            </div>
 
             <div class="layers-grid">
                 <article class="layer-block">
@@ -97,20 +88,17 @@
                     <li><span class="legend__swatch" style="background-color: #FEB24C;"></span> Low&ndash;medium</li>
                     <li><span class="legend__swatch" style="background-color: #FD8D3C;"></span> Medium&ndash;high</li>
                     <li><span class="legend__swatch" style="background-color: #FC4E2A;"></span> High</li>
-                    <li class="legend__item--deepest"><span class="legend__swatch" style="background-color: #E31A1C;"></span> Extremely high</li>
+                    <li><span class="legend__swatch" style="background-color: #E31A1C;"></span> Extremely high</li>
                 </ul>
             </aside>
         </section>
 
         <section class="content-section content-section--wide" id="findings" aria-labelledby="findings-title">
-            <header class="section-header section-header--wide">
-                <div class="section-marker">
-                    <p class="section-label">03 / Findings</p>
-                </div>
+            <div class="prose">
                 <h2 id="findings-title">Findings</h2>
-            </header>
+            </div>
 
-            <div class="stats-stack">
+            <div class="stats-grid">
                 <article class="stat">
                     <p class="stat__number">52.9%</p>
                     <p class="stat__label">Of US AI data center facilities are located in medium-high to extremely high water stress basins, compared to 43.7% of US basin area falling in those categories.</p>
@@ -123,7 +111,7 @@
                     <p class="stat__number">+152.7%</p>
                     <p class="stat__label">Overrepresentation of facilities in high water stress basins specifically (withdrawal ratio 40-80%), where 314 facilities are observed against 124 expected under a random distribution.</p>
                 </article>
-                <article class="stat">
+                <article class="stat stat--accent">
                     <p class="stat__number">+47%</p>
                     <p class="stat__label">Facilities in stressed basins have, on average, 47% more thermoelectric power plants within 50km than facilities in low-stress basins (t = 5.65, p &lt; 0.001).</p>
                 </article>
@@ -131,13 +119,8 @@
         </section>
 
         <section class="content-section" id="methods" aria-labelledby="methods-title">
-            <header class="section-header prose">
-                <div class="section-marker">
-                    <p class="section-label">04 / Methods</p>
-                </div>
-                <h2 id="methods-title">Sources and methodology</h2>
-            </header>
             <div class="prose">
+                <h2 id="methods-title">Sources and methodology</h2>
                 <p>The map combines three datasets. Data center facilities were compiled by the author from three sources: commercial data center directories, the IM3 Open Source Data Center Atlas published by Pacific Northwest National Laboratory in 2026 (which draws on OpenStreetMap), and a set of 22 hyperscale AI training facilities compiled by Epoch AI in 2026. After deduplication using geographic proximity, name matching, and OpenStreetMap IDs, the merged dataset contains 1,380 facilities across the United States. The compilation is the author's own work and is not publicly redistributed (contact for access).</p>
                 <p>Water stress data is drawn from the World Resources Institute's Aqueduct Water Risk Atlas, version 4.0. Aqueduct divides the contiguous United States into 3,433 hydrological basins, each assigned a Baseline Water Stress score on a five-point scale from Low to Extremely High, based on the ratio of annual withdrawals to available supply over a 40-year period (1979 to 2019). Aqueduct is the standard tool used by data center operators themselves, including Amazon Web Services, as the basis for water risk assessment and stewardship reporting.</p>
                 <p>Power plant data comes from the US Energy Information Administration's Form EIA-860 (February 2025 update), filtered to thermoelectric plants (coal, natural gas, nuclear, petroleum) over 100 megawatts. Renewable sources such as solar and wind were excluded because they consume negligible cooling water. The filtered dataset contains 581 facilities.</p>
@@ -153,13 +136,8 @@
         </section>
 
         <section class="content-section" id="about" aria-labelledby="about-title">
-            <header class="section-header prose">
-                <div class="section-marker">
-                    <p class="section-label">05 / Citation</p>
-                </div>
-                <h2 id="about-title">About</h2>
-            </header>
             <div class="prose">
+                <h2 id="about-title">About</h2>
                 <p>[BIO]</p>
                 <p>
                     Email: <a href="mailto:[EMAIL]">[EMAIL]</a><br>
@@ -177,10 +155,6 @@
                 </aside>
             </div>
         </section>
-
-        <blockquote class="closing-statement" cite="#findings">
-            <p>Facilities are nearly three times more likely to be located in high water stress basins than a random distribution would predict.</p>
-        </blockquote>
     </main>
 
     <footer class="site-footer">

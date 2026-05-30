@@ -17,7 +17,7 @@
 
     --prose-width: 65ch;
     --wide-width: min(1100px, 92vw);
-    --section-space: 6rem;
+    --section-space: 4rem;
     --header-height: 3.5rem;
 }
 
@@ -37,7 +37,7 @@ body {
     color: var(--color-text);
     font-family: var(--font-sans);
     font-size: 1.0625rem;
-    line-height: 1.75;
+    line-height: 1.7;
     -webkit-font-smoothing: antialiased;
 }
 
@@ -65,22 +65,23 @@ h2,
 h3 {
     font-family: var(--font-serif);
     font-weight: 600;
-    line-height: 1.2;
-    margin: 0;
+    line-height: 1.25;
+    margin: 0 0 1rem;
 }
 
 h1 {
-    font-size: clamp(2.25rem, 7vw, 5rem);
-    letter-spacing: -0.03em;
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    letter-spacing: -0.02em;
 }
 
 h2 {
     font-size: clamp(1.5rem, 3vw, 2rem);
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--color-accent);
 }
 
 h3 {
     font-size: 1.125rem;
-    margin-bottom: 0.75rem;
 }
 
 p {
@@ -113,42 +114,6 @@ ul {
 .content-section--wide .prose {
     width: var(--wide-width);
     max-width: none;
-}
-
-/* --------------------------------------------------------------------------
-   Section numbering
-   -------------------------------------------------------------------------- */
-
-.section-header {
-    margin-bottom: 2.5rem;
-}
-
-.section-header.prose,
-.section-header.section-header--wide {
-    width: min(var(--prose-width), 92vw);
-    margin-inline: auto;
-    margin-bottom: 2.5rem;
-}
-
-.section-header.section-header--wide {
-    width: var(--wide-width);
-    max-width: none;
-}
-
-.section-marker {
-    border-bottom: 1px solid var(--color-accent);
-    padding-bottom: 0.75rem;
-    margin-bottom: 1.25rem;
-}
-
-.section-label {
-    margin: 0;
-    font-family: var(--font-mono);
-    font-size: 0.75rem;
-    font-weight: 400;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--color-accent);
 }
 
 /* --------------------------------------------------------------------------
@@ -227,36 +192,17 @@ ul {
    -------------------------------------------------------------------------- */
 
 .hero {
-    padding: 8rem 0 4rem;
-}
-
-.hero__inner {
-    width: min(var(--prose-width), 92vw);
-    margin-inline: auto;
-}
-
-.hero h1 {
-    margin-bottom: 2rem;
+    padding: 3.5rem 0 2.5rem;
 }
 
 .hero__framing {
-    max-width: 50ch;
-    margin-bottom: 1.75rem;
-    font-family: var(--font-serif);
-    font-size: clamp(1.25rem, 2.5vw, 1.5rem);
-    font-style: italic;
-    font-weight: 400;
-    line-height: 1.5;
+    font-size: 1.1875rem;
     color: var(--color-text);
 }
 
 .hero__subtitle {
     margin-bottom: 0;
-    font-family: var(--font-mono);
-    font-size: 0.75rem;
-    font-weight: 400;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
+    font-size: 0.9375rem;
     color: var(--color-text-muted);
 }
 
@@ -265,11 +211,7 @@ ul {
    -------------------------------------------------------------------------- */
 
 .map-section {
-    padding-top: 0;
-}
-
-.map-section .section-header {
-    padding-top: var(--section-space);
+    padding-bottom: var(--section-space);
 }
 
 .map-section__frame {
@@ -299,9 +241,9 @@ ul {
 .layers-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2.5rem;
+    gap: 2rem;
     width: var(--wide-width);
-    margin: 0 auto 3rem;
+    margin: 2rem auto 2.5rem;
 }
 
 .layer-block h3 {
@@ -344,11 +286,6 @@ ul {
     gap: 0.5rem;
 }
 
-.legend__item--deepest {
-    color: var(--color-accent);
-    font-weight: 600;
-}
-
 .legend__swatch {
     display: inline-block;
     width: 1.25rem;
@@ -361,64 +298,36 @@ ul {
    Findings
    -------------------------------------------------------------------------- */
 
-.stats-stack {
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
     width: var(--wide-width);
-    margin: 0 auto;
+    margin: 2rem auto 0;
 }
 
 .stat {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 1.5rem 3rem;
-    align-items: start;
-    margin-bottom: 5rem;
-}
-
-.stat:last-child {
-    margin-bottom: 0;
+    border-top: 1px solid var(--color-border);
+    padding-top: 1.25rem;
 }
 
 .stat__number {
-    margin: 0;
-    font-family: var(--font-serif);
-    font-size: clamp(3.5rem, 10vw, 7rem);
-    font-weight: 700;
-    line-height: 0.95;
-    letter-spacing: -0.03em;
+    margin: 0 0 0.5rem;
+    font-family: var(--font-mono);
+    font-size: clamp(1.75rem, 3vw, 2.5rem);
+    font-weight: 600;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+}
+
+.stat--accent .stat__number {
     color: var(--color-accent);
 }
 
 .stat__label {
-    max-width: 45ch;
     margin: 0;
-    align-self: center;
-    font-family: var(--font-serif);
-    font-size: 1.0625rem;
-    font-weight: 400;
-    line-height: 1.75;
-    color: var(--color-text);
-}
-
-/* --------------------------------------------------------------------------
-   Closing statement
-   -------------------------------------------------------------------------- */
-
-.closing-statement {
-    margin: 0;
-    padding: 8rem 1.5rem 6rem;
-    border: 0;
-    text-align: center;
-}
-
-.closing-statement p {
-    max-width: 22em;
-    margin: 0 auto;
-    font-family: var(--font-serif);
-    font-size: clamp(1.75rem, 4vw, 2.5rem);
-    font-style: italic;
-    font-weight: 400;
-    line-height: 1.35;
-    color: var(--color-text);
+    font-size: 0.9375rem;
+    color: var(--color-text-muted);
 }
 
 /* --------------------------------------------------------------------------
@@ -453,6 +362,7 @@ ul {
 .site-footer {
     border-top: 1px solid var(--color-border);
     padding: 2rem 0 3rem;
+    margin-top: 1rem;
 }
 
 .site-footer__inner p {
@@ -467,7 +377,7 @@ ul {
 
 @media (max-width: 768px) {
     :root {
-        --section-space: 4rem;
+        --section-space: 3rem;
     }
 
     .site-header__inner {
@@ -482,11 +392,7 @@ ul {
     }
 
     .hero {
-        padding: 4rem 0 3rem;
-    }
-
-    .map-section .section-header {
-        padding-top: var(--section-space);
+        padding-top: 2.5rem;
     }
 
     .map-section__iframe {
@@ -496,26 +402,23 @@ ul {
 
     .layers-grid {
         grid-template-columns: 1fr;
-        gap: 2rem;
+        gap: 1.75rem;
     }
 
-    .stat {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-        margin-bottom: 4rem;
-    }
-
-    .stat__label {
-        max-width: none;
+    .stats-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
     }
 
     .legend__list {
         flex-direction: column;
         gap: 0.5rem;
     }
+}
 
-    .closing-statement {
-        padding: 5rem 1.25rem 4rem;
+@media (max-width: 480px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
     }
 }
 
@@ -531,69 +434,17 @@ ul {
     body {
         background: #fff;
         color: #000;
-        font-size: 10pt;
-        line-height: 1.5;
+        font-size: 11pt;
     }
 
     .site-header {
         display: none;
     }
 
-    .hero {
-        padding: 2rem 0 1.5rem;
-    }
-
-    .hero h1 {
-        font-size: 22pt;
-    }
-
-    .hero__framing {
-        font-size: 12pt;
-    }
-
-    .hero__subtitle,
-    .section-label {
-        color: var(--color-accent);
-    }
-
-    .content-section {
-        padding: 2rem 0;
-    }
-
-    .section-marker {
-        border-bottom-color: var(--color-accent);
-    }
-
     .map-section__iframe {
-        height: 320px;
+        height: 400px;
         border: 1px solid #ccc;
         page-break-inside: avoid;
-    }
-
-    .stat {
-        grid-template-columns: 1fr;
-        margin-bottom: 2rem;
-        page-break-inside: avoid;
-    }
-
-    .stat__number {
-        font-size: 28pt;
-        color: var(--color-accent);
-    }
-
-    .stat__label {
-        font-size: 10pt;
-        color: #000;
-    }
-
-    .closing-statement {
-        padding: 2.5rem 0;
-        page-break-inside: avoid;
-    }
-
-    .closing-statement p {
-        font-size: 14pt;
-        color: #000;
     }
 
     a {
@@ -613,7 +464,11 @@ ul {
         page-break-before: avoid;
     }
 
-    .legend__item--deepest {
-        color: var(--color-accent);
+    h2 {
+        border-bottom-color: #999;
+    }
+
+    .stat--accent .stat__number {
+        color: #000;
     }
 }

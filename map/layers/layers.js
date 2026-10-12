@@ -8,8 +8,8 @@ var wms_layers = [];
             
             
             source: new ol.source.XYZ({
-            attributions: ' ',
-                url: 'https://a.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png'
+            attributions: '© OpenStreetMap contributors, © CARTO',
+                url: 'https://a.basemaps.cartocdn.com/rastertiles/light_all/{z}/{x}/{y}.png?key=cb1_4hoi_1_f985fb51fcca5be3b6d27c3a'
             })
         });
 var format_BaselineWaterStress_1 = new ol.format.GeoJSON();
